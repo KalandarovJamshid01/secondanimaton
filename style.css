@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #fafafa;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  position: relative;
+}
+.container__child {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  position: absolute;
+  border: none;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.one {
+  background-color: palevioletred;
+  animation-name: one;
+}
+.two {
+  background-color: blue;
+  animation-name: two;
+}
+.three {
+  background-color: aqua;
+  animation-name: three;
+}
+.four {
+  background-color: blueviolet;
+  animation-name: four;
+}
+.five {
+  background-color: orange;
+  animation-name: five;
+}
+.six {
+  animation-name: six;
+  background-color: yellowgreen;
+}
+.seven {
+  animation-name: seven;
+  background-color: gold;
+}
+.eight {
+  animation-name: eight;
+  background-color: chocolate;
+}
+@keyframes one {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -10rem) scale(0.5);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes two {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(7rem, -7rem) scale(0.5);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes three {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10rem, 0rem) scale(0.5);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes four {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(7rem, 7rem) scale(0.5);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes five {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0rem, 10rem) scale(0.5);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes six {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-7rem, 7rem) scale(0.5);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes seven {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-10rem, 0rem) scale(0.5);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes eight {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-7rem, -7rem) scale(0.5);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
