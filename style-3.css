@@ -1,0 +1,336 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #fafafa;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 100%;
+  height: 40vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.conatiner__child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0rem;
+}
+.yellow {
+  background-color: rgb(250, 236, 40);
+}
+.orange {
+  background-color: orange;
+}
+.red {
+  background-color: red;
+}
+.violet {
+  background-color: violet;
+}
+.royal {
+  background-color: royalblue;
+}
+.teal {
+  background-color: teal;
+}
+.click {
+  width: 40%;
+  padding: 1.5rem 0rem;
+  background: none;
+  border-radius: 3rem;
+  border: 3px solid white;
+  font-size: 2.4rem;
+  font-family: serif;
+  font-weight: 600;
+  color: white;
+}
+.sub {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+@keyframes yellow {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+  40% {
+    transform: scale(1.5);
+  }
+  50% {
+    transform: scale(1.5) rotate(7deg);
+  }
+  55% {
+    transform: scale(1.5) rotate(-7deg);
+  }
+  60% {
+    transform: scale(1.5) rotate(7deg);
+  }
+  65% {
+    transform: scale(1.5) rotate(-7deg);
+  }
+  70% {
+    transform: scale(1.5) rotate(7deg);
+  }
+  75% {
+    transform: scale(1.5) rotate(-7deg);
+  }
+  80% {
+    transform: scale(1.5) rotate(7deg);
+  }
+  90% {
+    transform: scale(1) rotate(0);
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+.click-1 {
+  animation-name: yellow;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+.click-1:hover {
+  animation-name: shake;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+}
+@keyframes shake {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+.click-2 {
+  position: relative;
+}
+.click-2::before {
+  width: 100%;
+  height: 100%;
+  color: #555;
+  border-radius: 5rem;
+  background-color: white;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.5s;
+  animation-name: btn;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.click-2::after {
+  width: 100%;
+  height: 100%;
+  color: #555;
+  border-radius: 5rem;
+  background-color: white;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  transition: all 0.5s;
+  animation-name: button;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes btn {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+@keyframes button {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+.none {
+  height: 100%;
+  width: 12rem;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+}
+.nonee {
+  text-align: center;
+  animation-name: nonee;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes nonee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(12rem);
+  }
+}
+.none:hover .nonee {
+  animation-name: shake;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+}
+.btm {
+  position: relative;
+  width: 35%;
+  overflow: hidden;
+  padding: 1.5rem 1rem;
+}
+.friend {
+  font-size: 1.8rem;
+  font-weight: 600;
+  animation-name: friend;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.me,
+.mee,
+.meee {
+  font-size: 1.4rem;
+  font-weight: 600;
+
+  position: absolute;
+  animation-name: me;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  color: black;
+}
+.me {
+  top: 0;
+  left: 0%;
+  animation-delay: 0.5s;
+}
+.mee {
+  top: 20%;
+  right: 20%;
+  animation-delay: 0s;
+}
+.mee {
+  animation-delay: 1s;
+  bottom: 0;
+  left: 45%;
+}
+@keyframes friend {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-120%);
+  }
+}
+@keyframes me {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.royal {
+  position: relative;
+}
+.finger i {
+  color: yellow;
+  position: absolute;
+}
+.first {
+  font-size: 4.4rem;
+  top: 0%;
+  left: 50%;
+  animation-name: first;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+.second {
+  top: 30%;
+  left: 25%;
+  transform: rotate(-120deg);
+  font-size: 2.4rem;
+  opacity: 0;
+}
+.third {
+  top: 45%;
+  left: 25%;
+  transform: rotate(-120deg);
+  font-size: 2.4rem;
+  opacity: 0;
+}
+@keyframes first {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(2rem);
+  }
+}
+@keyframes hover {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.sub:hover .finger .second {
+  animation-name: hover;
+  animation-duration: 0.1s;
+  animation-iteration-count: infinite;
+}
+.sub:hover .finger .third {
+  animation-name: hover;
+  animation-duration: 0.1s;
+  animation-iteration-count: infinite;
+}
+.qizil i {
+  color: red;
+}
+.teal button::after {
+  color: red;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation-name: after;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes after {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10rem);
+  }
+}
