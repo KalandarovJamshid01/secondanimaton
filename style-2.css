@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #fafafa;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.container__child {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 20px;
+}
+.container__child--0 {
+  width: 10rem;
+  height: 1.5rem;
+  background-color: chocolate;
+  border-radius: 1rem;
+}
+.container__child:active .one {
+  animation-name: one;
+  animation-duration: 1s;
+}
+.container__child:active .two {
+  animation-name: two;
+  animation-duration: 1s;
+}
+.container__child:active .three {
+  animation-name: three;
+  animation-duration: 1s;
+}
+@keyframes one {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(135deg);
+  }
+}
+
+@keyframes two {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-10rem);
+    opacity: 0;
+  }
+}
+@keyframes three {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg) translate(-50px, -50px);
+  }
+}
+.gorizontal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5px;
+  background-color: white;
+}
+.bir,
+.ikki {
+  background-color: chocolate;
+}
+.bir {
+  border-radius: 1rem 0rem 0rem 1rem;
+}
+.ikki {
+  border-radius: 0rem 1rem 1rem 0rem;
+}
+.child-1:active .gorizontal .bir {
+  animation-name: bir;
+  animation-duration: 1s;
+}
+.child-1:active .gorizontal .ikki {
+  animation-name: ikki;
+  animation-duration: 1s;
+}
+@keyframes bir {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+}
+@keyframes ikki {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+}
